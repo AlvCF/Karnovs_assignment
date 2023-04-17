@@ -24,7 +24,7 @@ class Checkout
 
     calculate_total
 
-    (@total_promotions || []).each do |tot_prom|
+    @total_promotions.each do |tot_prom|
       tot_prom.apply_promotion(self)
     end
 
